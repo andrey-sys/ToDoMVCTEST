@@ -1,4 +1,4 @@
-package TodosMVCTest;
+package TodoMVCTest;
 
 import TodosMVCUtilities.BaseUITest;
 import TodoMVCPageObjects.TodoMVCPage;
