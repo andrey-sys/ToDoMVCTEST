@@ -1,5 +1,7 @@
-package AtodosMVC;
+package TodosMVCUtilities;
 
+import TodoMVCExtensions.HTMLReport;
+import TodoMVCPageObjects.TodoMVCPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;

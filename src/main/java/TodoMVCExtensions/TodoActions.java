@@ -1,5 +1,6 @@
-package AtodosMVC;
+package TodoMVCExtensions;
 
+import TodosMVCUtilities.BaseElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;

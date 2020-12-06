@@ -1,5 +1,9 @@
-package AtodosMVC;
+package TodoMVCPageObjects;
 
+import TodoMVCExtensions.HTMLReport;
+import TodosMVCUtilities.InitBrowserDriver;
+import TodoMVCExtensions.TodoActions;
+import TodoMVCExtensions.Verification;
 import io.qameta.allure.Step;
 
 

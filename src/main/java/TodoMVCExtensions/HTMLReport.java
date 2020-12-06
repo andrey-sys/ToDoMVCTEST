@@ -1,5 +1,6 @@
-package AtodosMVC;
+package TodoMVCExtensions;
 
+import TodosMVCUtilities.BaseUITest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class HTMLReport extends BaseUITest

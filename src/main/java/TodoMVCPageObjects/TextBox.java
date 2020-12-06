@@ -1,5 +1,6 @@
-package AtodosMVC;
+package TodoMVCPageObjects;
 
+import TodosMVCUtilities.BaseElement;
 import io.qameta.allure.Step;
 
 public class TextBox extends BaseElement

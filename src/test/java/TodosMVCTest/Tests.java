@@ -1,13 +1,13 @@
 package TodosMVCTest;
 
-import AtodosMVC.BaseUITest;
-import AtodosMVC.TodoMVCPage;
+import TodosMVCUtilities.BaseUITest;
+import TodoMVCPageObjects.TodoMVCPage;
 import io.qameta.allure.Description;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 
-@Listeners(AtodosMVC.Listeners.class)
+@Listeners(TodoMVCExtensions.Listeners.class)
 public class Tests extends BaseUITest
 {
 
