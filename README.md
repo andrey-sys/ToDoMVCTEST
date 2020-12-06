@@ -71,7 +71,7 @@ I'm using UI acceptance tests result in a HTML report for
   result of HTML last executed report, you have to create 
   folder on your PC, to do that, you must to open
    TodosMVCUtilities folder, than open BaseUITest class
-    and change the location in line 25.
+    and choose your path for the location in line 25.
   Also, I'm using Allure report and in case of test failures,
    a screenshot of the UI at the point of failure is
     embedded into the report.
