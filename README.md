@@ -54,7 +54,9 @@ In order to execute those tests you need to
  #Usage
   ***
   To run all tests with maven, navigate to your directory
-  and open it in powerShell than type in command line -->mvn 
+  and open it in powerShell than type in command line
+   -->mvn compile and hit enter, and then type in 
+   command line --> mvn test and hit enter. 
   
  To launch tests in Chrome, Edge or FireFox browser, you
  need change part of code by following command:  go to 
