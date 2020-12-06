@@ -19,7 +19,8 @@ This exercise is for demonstrating of my skills
   - TodoMVCExtensions folder contains 4 classes
   "HTMLReport", "Listeners", "TodoActions", "Verification"     
      
- ##Concepts Included
+ #Concepts Included
+ ***
  - Common web page interaction methods
  - Page Object pattern
  - Dependency injection
@@ -29,6 +30,7 @@ This exercise is for demonstrating of my skills
  - Reporting classes
  
  #Tools
+ ***
  - Maven
  - Java
  - Selenium webDriver
