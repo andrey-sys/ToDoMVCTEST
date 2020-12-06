@@ -1,4 +1,4 @@
-package A_TodosMVC;
+package AtodosMVC;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Step;

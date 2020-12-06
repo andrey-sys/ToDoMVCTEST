@@ -1,4 +1,4 @@
-package A_TodosMVC;
+package AtodosMVC;
 
 import io.qameta.allure.Step;
 import org.testng.Assert;

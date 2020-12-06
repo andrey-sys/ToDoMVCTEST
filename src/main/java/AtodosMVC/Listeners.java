@@ -1,4 +1,4 @@
-package A_TodosMVC;
+package AtodosMVC;
 
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
@@ -8,7 +8,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import static A_TodosMVC.InitBrowserDriver.getDriver;
+import static AtodosMVC.InitBrowserDriver.getDriver;
 
 public class Listeners implements ITestListener
 {

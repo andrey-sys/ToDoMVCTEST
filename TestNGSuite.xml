@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="false">
   <test name="Tests">
     <classes>
-        <class name="A_TodosMVC_Tests.Tests"/>
+        <class name="TodosMVCTest.Tests"/>
     </classes>
   </test>
 </suite>
