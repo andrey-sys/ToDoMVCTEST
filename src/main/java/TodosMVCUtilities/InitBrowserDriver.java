@@ -11,13 +11,12 @@ public class InitBrowserDriver
 {
 
     private static WebDriver driver = null;
-    private static String browserType = "edge";
+    private static String browserType = "chrome";
 
 
     @Step("InitChromeDriver_CLASS: initialization of Chrome driver")
     public static WebDriver getDriver()
     {
-        System.out.println("Get driver");
         if (driver == null)
         {
 
