@@ -13,12 +13,12 @@ public class Tests extends BaseUITest
 
     @Test(description = "NAVIGATION_TO_SITE")
     @Description("TEST_DESCRIPTION: navigate with URL and verify element's text on main page")
-    public static void test_01_VerifyNavigationToToDos()
+    public static void test_01_VerifyLogo()
     {
         TodoMVCPage todoMVCPage = new TodoMVCPage();
         todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_01_VerifyNavigationToToDos");
         todoMVCPage.htmlReport.logINFO("Validation of the header text element: \"todos\" on the main page");
-        todoMVCPage.verifyTextFromHeader.verifyTextFromElement("todos");
+        todoMVCPage.verifyTextFromHeader.verifyTextFromElement("todosss");
     }
 
     @Test(description = "SET_LIST_AND_DELETE_ROWS")

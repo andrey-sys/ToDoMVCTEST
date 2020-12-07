@@ -124,8 +124,23 @@ I'm using UI functional tests result in a HTML report for
     in any browser and check the proper start of your tests, 
     and another additional information.
     
-   Also, I'm using Allure report, my favorite one.  in case of test failures,
-   a screenshot of the UI at the point of failure is
-    embedded into the report.
+  In addition way, I'm using Allure report, my favorite one. 
+  So how it's work? First of all you have to see the
+    
+    allure-results 
+     
+   folder in left corner, under project name,
+   after first execution. The next step is
+   opening your terminal, and typing after direction: 
+   
+     C:\Dev\ToDoMVCTEST>allure serve - allure-results
+     
+   and hit enter button, and after few seconds, you will see 
+   in your default browser, new tab with Allure report.
+   There is a lot of information about execution those tests, methods, 
+   elements that was found and another additional information,
+    that you can reach easily, by click on any topics.
+   In case of test failures, the screenshot of the UI 
+   at this point of failure will appear immediately.
     
  
