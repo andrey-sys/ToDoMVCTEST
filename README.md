@@ -108,7 +108,7 @@ In order to execute those tests you need to
    of course if you have this browser installed on your PC. 
    You can type by uppercase or lowercase letters, it's don't matter.
    
-***Reporting***
+## Reporting
 ***
 I'm using UI functional tests result in a HTML report for
  each feature in this automation exercise. For saving data
