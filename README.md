@@ -147,5 +147,3 @@ I'm using UI functional tests result in a HTML report for
      Listeners CLASS: Screen shot in case of test is failed 1 sub-step1s 091ms
      Page Screen Shot                                             38 KB
          
-         
-   
