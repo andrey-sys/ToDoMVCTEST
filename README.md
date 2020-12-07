@@ -1,4 +1,4 @@
-##ToDoMVC Automation Exercise
+#ToDoMVC Automation Exercise
 ***
 there is an exercise, for demonstrating of my skills
  in the Java OOP language, using the Selenium and TestNG frameworks
