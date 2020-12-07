@@ -56,12 +56,13 @@ public class Listeners implements ITestListener
         saveScreenshot();
     }
 
-    @Step("Listeners_CLASS: Screen shot in case of test is failed")
+    @Step("Listeners CLASS: Screen shot in case of test is failed")
     @Attachment(value = "Page Screen Shot", type = "image/png")
     public byte[] saveScreenshot()
     {
 
-        return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+        byte[] screenshotAs =((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+        return screenshotAs;
     }
 
 }

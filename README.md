@@ -17,7 +17,7 @@ there is an exercise, for demonstrating of my skills
     leave more time to create wide range of tests to improve
     your quality of web application, also will save your time and money.
    
-     
+   
  **Exercise short overview** 
  
    The exercise contains 4 main folders:
@@ -30,7 +30,7 @@ there is an exercise, for demonstrating of my skills
   - TodoMVCExtensions folder contains 4 classes
   "HTMLReport", "Listeners", "TodoActions", "Verification"     
      
- #Concepts Included
+ ***Concepts Included***
  ***
  - Common web page interaction methods
  - Page Object pattern
@@ -40,7 +40,7 @@ there is an exercise, for demonstrating of my skills
  - Commonly used test utility classes 
  - Reporting classes
  
- #Tools
+ ***Tools***
  ***
  - Maven
  - Java
@@ -49,7 +49,7 @@ there is an exercise, for demonstrating of my skills
  - Allure report
  - Extent report
  
- #Requirements
+ ***Requirements***
  ***
 In order to execute those tests you need to
  have the following installed environments locally.
@@ -72,7 +72,7 @@ In order to execute those tests you need to
      C:\Users\Andrew>java -version
      java version "1.8.0_211"
       
- #Usage
+ ***Usage***
   ***
   To run all those tests with maven, after cloning this
    repo on your device, navigate to your directory folder 
@@ -107,7 +107,7 @@ In order to execute those tests you need to
    of course if you have this browser installed on your PC. 
    You can type by uppercase or lowercase letters, it's don't matter.
    
-###Reporting
+***Reporting***
 ***
 I'm using UI functional tests result in a HTML report for
  each feature in this automation exercise. For saving data
@@ -116,7 +116,7 @@ I'm using UI functional tests result in a HTML report for
    TodosMVCUtilities folder, than open BaseUITest class
     and choose your path for the location in line 25:
       
-      reports = new ExtentReports("C:\\Automation\\TestAutomation\\Selenium\\HTML_Report\\Report.html", true);
+     reports = new ExtentReports("C:\\Automation\\TestAutomation\\Selenium\\HTML_Report\\Report.html", true);
       
    You can choose your location in your opinion, 
    and after executing those tests the Report.html file will
@@ -127,7 +127,7 @@ I'm using UI functional tests result in a HTML report for
   In addition way, I'm using Allure report, my favorite one. 
   So how it's work? First of all you have to see the
     
-    allure-results 
+     allure-results 
      
    folder in left corner, under project name,
    after first execution. The next step is
@@ -141,6 +141,11 @@ I'm using UI functional tests result in a HTML report for
    elements that was found and another additional information,
     that you can reach easily, by click on any topics.
    In case of test failures, the screenshot of the UI 
-   at this point of failure will appear immediately.
+   at this point of failure will appear immediately
+    under the next topic:
     
- 
+     Listeners CLASS: Screen shot in case of test is failed 1 sub-step1s 091ms
+     Page Screen Shot                                             38 KB
+         
+         
+   

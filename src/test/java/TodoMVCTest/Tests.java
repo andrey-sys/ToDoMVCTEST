@@ -18,7 +18,7 @@ public class Tests extends BaseUITest
         TodoMVCPage todoMVCPage = new TodoMVCPage();
         todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_01_VerifyNavigationToToDos");
         todoMVCPage.htmlReport.logINFO("Validation of the header text element: \"todos\" on the main page");
-        todoMVCPage.verifyTextFromHeader.verifyTextFromElement("todosss");
+        todoMVCPage.verifyTextFromHeader.verifyTextFromElement("todos");
     }
 
     @Test(description = "SET_LIST_AND_DELETE_ROWS")
