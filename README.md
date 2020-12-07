@@ -64,9 +64,9 @@ In order to execute those tests you need to
  in line 14 "private static String browserType = "chrome"; "
  you need to change browser type that you wish.
    
-#Reporting
+###Reporting
 ***
-I'm using UI acceptance tests result in a HTML report for
+I'm using UI acceptance and functional tests result in a HTML report for
  each feature in this automation exercise. For saving data
   result of HTML last executed report, you have to create 
   folder on your PC, to do that, you must to open
