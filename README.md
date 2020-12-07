@@ -31,7 +31,8 @@ there is an exercise, for demonstrating of my skills
   - TodoMVCExtensions folder contains 4 classes
   "HTMLReport", "Listeners", "TodoActions", "Verification"     
      
- ***Concepts Included***
+ ## Concepts Included
+ 
  ***
  - Common web page interaction methods
  - Page Object pattern
@@ -41,7 +42,8 @@ there is an exercise, for demonstrating of my skills
  - Commonly used test utility classes 
  - Reporting classes
  
- ***Tools***
+ ## Tools
+ 
  ***
  - Maven
  - Java
@@ -50,7 +52,8 @@ there is an exercise, for demonstrating of my skills
  - Allure report
  - Extent report
  
- ***Requirements***
+ ## Requirements
+ 
  ***
 In order to execute those tests you need to
  have the following installed environments locally.
@@ -73,7 +76,8 @@ In order to execute those tests you need to
      C:\Users\Andrew>java -version
      java version "1.8.0_211"
       
- ***Usage***
+ ## Usage
+ 
   ***
   To run all those tests with maven, after cloning this
    repo on your device, navigate to your directory folder 
@@ -109,6 +113,7 @@ In order to execute those tests you need to
    You can type by uppercase or lowercase letters, it's don't matter.
    
 ## Reporting
+
 ***
 I'm using UI functional tests result in a HTML report for
  each feature in this automation exercise. For saving data
