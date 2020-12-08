@@ -13,7 +13,7 @@ public class TextBox extends BaseElement
         this.textBoxXpath = textBoxXpath;
     }
 
-    @Step("TextBox_CLASS: getting text from element")
+    @Step("TextBox CLASS: getting text from element")
     public String getTextFromTextBox()
     {
         return getElement(textBoxXpath).getText();

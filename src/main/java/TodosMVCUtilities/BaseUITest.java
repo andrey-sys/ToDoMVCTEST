@@ -1,6 +1,7 @@
 package TodosMVCUtilities;
 
 import TodoMVCExtensions.HTMLReport;
+import TodoMVCExtensions.TodoMVCWorkFlow;
 import TodoMVCPageObjects.TodoMVCPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -19,13 +20,13 @@ public class BaseUITest extends InitBrowserDriver
     public static ExtentReports reports;
     public static ExtentTest test;
 
-    @BeforeClass(description = "Before Class: start the Chrome browser")
+    @BeforeClass(description = "Before class: start the Chrome browser")
     public void setUpBrowser()
     {
-        reports = new ExtentReports("C:\\Automation\\TestAutomation\\Selenium\\HTML_Report\\Report.html", true);
+        reports = new ExtentReports("C:\\Dev\\ToDoMVCTEST\\HTML_Report\\Report.html", true);
         HTMLReport htmlReport = new HTMLReport();
-        htmlReport.startTestLog("STARTING_BeforeClass");
-        htmlReport.logINFO("Initialization(opening) of browser's drivers");
+        htmlReport.startTestLog("STARTING BeforeClass");
+        htmlReport.logINFO("Initialization of browser's driver");
         driver = getDriver();
         htmlReport.logINFO("Maximize the window of browser");
         driver.manage().window().maximize();
@@ -36,26 +37,29 @@ public class BaseUITest extends InitBrowserDriver
     @BeforeMethod(description = "Before method: navigation to the Web application")
     public void navigateToSite(Method method)
     {
+        TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_BeforeMethod");
+        todoMVCPage.htmlReport.startTestLog("STARTING BeforeMethod");
         todoMVCPage.htmlReport.logINFO("Navigation to site TodoMVC");
-        todoMVCPage.navigate();
+        flow.navigate();
     }
 
     @AfterMethod(description = "After method: deleting all list")
     public void clearList()
     {
+        TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_AfterMethod");
+        todoMVCPage.htmlReport.startTestLog("STARTING AfterMethod");
         todoMVCPage.htmlReport.logINFO("Clearing of the rows in the list before new session");
-        todoMVCPage.deleteAllList();
+        flow.deleteAllList();
     }
 
     @AfterClass(description = "After class: closing browser")
     public void quitBrowser()
     {
+
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_AfterClass");
+        todoMVCPage.htmlReport.startTestLog("STARTING AfterClass");
         todoMVCPage.htmlReport.logINFO("The browser is quit");
         driver.quit();
         todoMVCPage.htmlReport.logINFO("The end of test reporting");

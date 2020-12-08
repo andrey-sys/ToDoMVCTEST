@@ -13,16 +13,11 @@ public class Button extends BaseElement
         this.buttonXpath = buttonXpath;
     }
 
-    @Step("Button_CLASS: Click on element")
+    @Step("Button CLASS: Click on element")
     public void clickOnIt()
     {
         getElement(buttonXpath).click();
     }
 
-    @Step("Button_CLASS: Get text from button")
-    public void getTextFromButton()
-    {
-        getElement(buttonXpath).getText();
-    }
 
 }

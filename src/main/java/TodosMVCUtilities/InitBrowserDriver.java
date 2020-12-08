@@ -14,7 +14,7 @@ public class InitBrowserDriver
     private static String browserType = "chrome";
 
 
-    @Step("InitChromeDriver_CLASS: initialization of Chrome driver")
+    @Step("InitChromeDriver CLASS: initialization of Chrome driver")
     public static WebDriver getDriver()
     {
         if (driver == null)

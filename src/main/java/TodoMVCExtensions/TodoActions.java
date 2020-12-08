@@ -18,25 +18,25 @@ public class TodoActions extends BaseElement
         this.actionsElementXpath = actionsElementXpath;
     }
 
-    @Step("TodoActions_CLASS: mouse hover on element")
+    @Step("TodoActions CLASS: mouse hover on element")
     public void mouseHover()
     {
         action.moveToElement(getElement(actionsElementXpath)).perform();  // build? before perform()?
     }
 
-    @Step("TodoActions_CLASS: double click on element")
+    @Step("TodoActions CLASS: double click on element")
     public void doubleClick()
     {
         action.doubleClick(getElement(actionsElementXpath)).perform();
     }
 
-    @Step("TodoActions_CLASS: press ENTER button")
+    @Step("TodoActions CLASS: press ENTER button")
     public void hitEnter()
     {
         getElement(actionsElementXpath).sendKeys(Keys.ENTER);
     }
 
-    @Step("TodoActions_CLASS: press DELETE button")
+    @Step("TodoActions CLASS: press DELETE button")
     public void hitDelete()
     {
         getElement(actionsElementXpath).sendKeys(Keys.BACK_SPACE);

@@ -14,7 +14,7 @@ public class Input extends BaseElement
         this.inputElementXpath = inputElementXpath;
     }
 
-    @Step("Input_CLASS: Set text value in one row and press Enter button")
+    @Step("Input CLASS: Set text value in one row and press Enter button")
     public void setTextValue(String value)
     {
         getElement(inputElementXpath).sendKeys(value);

@@ -1,5 +1,6 @@
 package TodoMVCTest;
 
+import TodoMVCExtensions.TodoMVCWorkFlow;
 import TodosMVCUtilities.BaseUITest;
 import TodoMVCPageObjects.TodoMVCPage;
 import io.qameta.allure.Description;
@@ -25,14 +26,15 @@ public class Tests extends BaseUITest
     @Description("TEST DESCRIPTION: set list of 3 rows and delete two of them and verify that left one row")
     public static void test02SetListAndDelete()
     {
+        TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
         todoMVCPage.htmlReport.startTestLog("STARTING TEST: test02SetListAndDelete");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
-        todoMVCPage.setList("Data types and variables", "Kinds of Data Types", "Variables Rules");
+        flow.setList("Data types and variables", "Kinds of Data Types", "Variables Rules");
         todoMVCPage.htmlReport.logINFO("Delete one row");
-        todoMVCPage.deleteRow();
+        flow.deleteRow();
         todoMVCPage.htmlReport.logINFO("Delete one row");
-        todoMVCPage.deleteRow();
+        flow.deleteRow();
         todoMVCPage.htmlReport.logINFO("Validation of the strong element, number of item left, should be \"1\" ");
         todoMVCPage.strongTag.verifyTextFromElement("1");
 
@@ -61,10 +63,11 @@ public class Tests extends BaseUITest
             " click on Active Button, verify that 2 items left and Active button is Selected")
     public static void test_04ActiveButtonFunction()
     {
+        TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
         todoMVCPage.htmlReport.startTestLog("STARTING TEST: test04ActiveButtonFunction");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
-        todoMVCPage.setList("Environment", "Java Run Time Environment", "Intellij - Fundamentals");
+        flow.setList("Environment", "Java Run Time Environment", "Intellij - Fundamentals");
         todoMVCPage.htmlReport.logINFO("Click on element");
         todoMVCPage.toggleButton.clickOnIt();
         todoMVCPage.htmlReport.logINFO("Click on element");
@@ -81,10 +84,11 @@ public class Tests extends BaseUITest
             "verify that 2 items left and Completed button is Selected")
     public static void test05CompletedButtonFunction()
     {
+        TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
         todoMVCPage.htmlReport.startTestLog("STARTING TEST: test05CompletedButtonFunction");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
-        todoMVCPage.setList("Clarity", "Noise", "Calmness");
+        flow.setList("Clarity", "Noise", "Calmness");
         todoMVCPage.htmlReport.logINFO("Click on element");
         todoMVCPage.toggleButton.clickOnIt();
         todoMVCPage.htmlReport.logINFO("Click on element");
@@ -101,10 +105,11 @@ public class Tests extends BaseUITest
             "click on All button, verify that All button is Selected")
     public static void test06AllButtonFunction()
     {
+        TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
         todoMVCPage.htmlReport.startTestLog("STARTING TEST: test06AllButtonFunction");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
-        todoMVCPage.setList("JavaScript", "TypeScript", "Python");
+        flow.setList("JavaScript", "TypeScript", "Python");
         todoMVCPage.htmlReport.logINFO("Click on element");
         todoMVCPage.toggleButton.clickOnIt();
         todoMVCPage.htmlReport.logINFO("Click on element");
@@ -122,15 +127,18 @@ public class Tests extends BaseUITest
             "Backspace button same times as the length of the string, and verify that 2 items left")
     public static void test07DoubleClickToDeleteRow()
     {
+        TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
         todoMVCPage.htmlReport.startTestLog("STARTING TEST: test07DoubleClickToDeleteRow");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
-        todoMVCPage.setList("ABSTRACTION is a thing", "POLYMORPHISM", "ENCAPSULATION");
+        flow.setList("ABSTRACTION is a thing", "POLYMORPHISM", "ENCAPSULATION");
         todoMVCPage.htmlReport.logINFO("Delete text in row by double click and delete with backspace");
-        todoMVCPage.deleteRowWithBackspace(todoMVCPage.todoRow_2_text, todoMVCPage.todoRow_2, todoMVCPage.todoRowEdit_2);
+        flow.deleteRowWithBackspace(todoMVCPage.todoRow_2_text, todoMVCPage.todoRow_2, todoMVCPage.todoRowEdit_2);
         todoMVCPage.htmlReport.logINFO("Validation of the strong element, number of item left, should be \"2\" ");
         todoMVCPage.strongTag.verifyTextFromElement("2");
+        todoMVCPage.completedButton.clickOnIt();
+        todoMVCPage.allButton.clickOnIt();
 
-//        Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
+
     }
 }

@@ -12,43 +12,43 @@ import static TodosMVCUtilities.InitBrowserDriver.getDriver;
 
 public class Listeners implements ITestListener
 {
-    @Step("Listeners_CLASS: Starting execution of the tests")
+    @Step("Listeners CLASS: Starting execution of the tests")
     public void onStart(ITestContext execution)
     {
         System.out.println("------------------- Starting execution ------------------");
     }
 
-    @Step("Listeners_CLASS: Test is finished")
+    @Step("Listeners CLASS: Test is finished")
     public void onFinish(ITestContext execution)
     {
         System.out.println("------------------- Ending execution ------------------");
     }
 
-    @Step("Listeners_CLASS: Test failed but with in success percentage")
+    @Step("Listeners CLASS: Test failed but with in success percentage")
     public void onTestFailedButWithinSuccessPercentage(ITestResult test)
     {
         System.out.println();
     }
 
-    @Step("Listeners_CLASS: Test is skipped")
+    @Step("Listeners CLASS: Test is skipped")
     public void onTestSkipped(ITestResult test)
     {
         System.out.println("------------- Skipping Test: " + test.getName() + " -------------");
     }
 
-    @Step("Listeners_CLASS: Test is started")
+    @Step("Listeners CLASS: Test is started")
     public void onTestStart(ITestResult test)
     {
         System.out.println("------------- Starting Test: " + test.getName() + " -------------");
     }
 
-    @Step("Listeners_CLASS: Test is succeeded")
+    @Step("Listeners CLASS: Test is succeeded")
     public void onTestSuccess(ITestResult test)
     {
         System.out.println("------------- Test: " + test.getName() + " Passed ---------------");
     }
 
-    @Step("Listeners_CLASS: Test is failed and screen shot is done")
+    @Step("Listeners CLASS: Test is failed and screen shot is done")
     public void onTestFailure(ITestResult test)
     {
 
