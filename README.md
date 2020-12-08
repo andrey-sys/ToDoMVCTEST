@@ -28,8 +28,8 @@ there is an exercise, for demonstrating of my skills
    "BaseElement", "BaseUITest", "InitBrowserDriver"
   - TodoMVCPageObjects folder contains 4 classes
    "Button", "Input", "TextBox", "TodoMVCPage"
-  - TodoMVCExtensions folder contains 4 classes
-  "HTMLReport", "Listeners", "TodoActions", "Verification"     
+  - TodoMVCExtensions folder contains 5 classes
+   "HTMLReport", "Listeners", "TodoActions", "TodoMVCWorkFlow", "Verification"     
      
  ## Concepts Included
  
@@ -122,7 +122,7 @@ I'm using UI functional tests result in a HTML report for
    TodosMVCUtilities folder, than open BaseUITest class
     and choose your path for the location in line 25:
       
-     reports = new ExtentReports("C:\\Automation\\TestAutomation\\Selenium\\HTML_Report\\Report.html", true);
+     reports = new ExtentReports("C:\\Dev\\ToDoMVCTEST\\HTML_Report\\Report.html", true);
       
    You can choose your location in your opinion, 
    and after executing those tests the Report.html file will
