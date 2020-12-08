@@ -25,7 +25,7 @@ public class BaseUITest extends InitBrowserDriver
     {
         reports = new ExtentReports("C:\\Dev\\ToDoMVCTEST\\HTML_Report\\Report.html", true);
         HTMLReport htmlReport = new HTMLReport();
-        htmlReport.startTestLog("STARTING BeforeClass");
+        htmlReport.log("STARTING BeforeClass");
         htmlReport.logINFO("Initialization of browser's driver");
         driver = getDriver();
         htmlReport.logINFO("Maximize the window of browser");
@@ -37,34 +37,33 @@ public class BaseUITest extends InitBrowserDriver
     @BeforeMethod(description = "Before method: navigation to the Web application")
     public void navigateToSite(Method method)
     {
+        HTMLReport htmlReport = new HTMLReport();
         TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
-        TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING BeforeMethod");
-        todoMVCPage.htmlReport.logINFO("Navigation to site TodoMVC");
+        htmlReport.log("STARTING BeforeMethod");
+        htmlReport.logINFO("Navigation to site TodoMVC");
         flow.navigate();
     }
 
     @AfterMethod(description = "After method: deleting all list")
     public void clearList()
     {
+        HTMLReport htmlReport = new HTMLReport();
         TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
-        TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING AfterMethod");
-        todoMVCPage.htmlReport.logINFO("Clearing of the rows in the list before new session");
+        htmlReport.log("STARTING AfterMethod");
+        htmlReport.logINFO("Clearing of the rows in the list before new session");
         flow.deleteAllList();
     }
 
     @AfterClass(description = "After class: closing browser")
     public void quitBrowser()
     {
-
-        TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING AfterClass");
-        todoMVCPage.htmlReport.logINFO("The browser is quit");
+        HTMLReport htmlReport = new HTMLReport();
+        htmlReport.log("STARTING AfterClass");
+        htmlReport.logINFO("The browser is quit");
         driver.quit();
-        todoMVCPage.htmlReport.logINFO("The end of test reporting");
+        htmlReport.logINFO("The end of test reporting");
         reports.endTest(test);
-        todoMVCPage.htmlReport.logINFO("Saving all logs to file");
+        htmlReport.logINFO("Saving all logs to file");
         reports.flush();
     }
 

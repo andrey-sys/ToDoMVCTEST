@@ -1,16 +1,13 @@
 package TodoMVCPageObjects;
 
-import TodoMVCExtensions.HTMLReport;
-import TodosMVCUtilities.InitBrowserDriver;
 import TodoMVCExtensions.TodoActions;
 import TodoMVCExtensions.Verification;
-import io.qameta.allure.Step;
+import TodosMVCUtilities.InitBrowserDriver;
 
 
 public class TodoMVCPage extends InitBrowserDriver
 {
 
-    public HTMLReport htmlReport = new HTMLReport();
 
     public Input newTodo = new Input("//input[@id='new-todo']");
 

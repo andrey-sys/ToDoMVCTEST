@@ -6,12 +6,15 @@ import io.qameta.allure.Step;
 
 public class HTMLReport extends BaseUITest
 {
-@Step("")
-    public void startTestLog(String reportDescription)
+
+
+    @Step("HTMLReport CLASS: starting test")
+    public void log(String reportStartingTest)
     {
-        test = reports.startTest(reportDescription);
+        test = reports.startTest(reportStartingTest);
     }
 
+    @Step("HTMLReport CLASS: log information of method")
     public void logINFO(String logInformation)
     {
         test.log(LogStatus.INFO, logInformation);
