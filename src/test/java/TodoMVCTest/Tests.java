@@ -11,22 +11,22 @@ import org.testng.annotations.Test;
 public class Tests extends BaseUITest
 {
 
-    @Test(description = "NAVIGATION_TO_SITE")
-    @Description("TEST_DESCRIPTION: navigate with URL and verify element's text on main page")
-    public static void test_01_VerifyLogo()
+    @Test(description = "Verify logo")
+    @Description("TEST DESCRIPTION: verify element's text of the logo on main page")
+    public static void test01VerifyLogo()
     {
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_01_VerifyNavigationToToDos");
+        todoMVCPage.htmlReport.startTestLog("STARTING TEST: test01VerifyLogo");
         todoMVCPage.htmlReport.logINFO("Validation of the header text element: \"todos\" on the main page");
         todoMVCPage.verifyTextFromHeader.verifyTextFromElement("todos");
     }
 
-    @Test(description = "SET_LIST_AND_DELETE_ROWS")
-    @Description("TEST_DESCRIPTION: set list of 3 rows and delete two of them and verify that left one row")
-    public static void test_02_settListAndDeleteTwoRows()
+    @Test(description = "SET LIST AND DELETE ROWS")
+    @Description("TEST DESCRIPTION: set list of 3 rows and delete two of them and verify that left one row")
+    public static void test02SetListAndDelete()
     {
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_02_settListAndDeleteTwoRows");
+        todoMVCPage.htmlReport.startTestLog("STARTING TEST: test02SetListAndDelete");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
         todoMVCPage.setList("Data types and variables", "Kinds of Data Types", "Variables Rules");
         todoMVCPage.htmlReport.logINFO("Delete one row");
@@ -38,13 +38,13 @@ public class Tests extends BaseUITest
 
     }
 
-    @Test(description = "VERIFY_CLEAR_COMPLETED_BUTTON_FUNCTION")
-    @Description("TEST_DESCRIPTION: set row with text, click on Toggle All button," +
+    @Test(description = "VERIFY CLEAR COMPLETED BUTTON FUNCTION")
+    @Description("TEST DESCRIPTION: set row with text, click on Toggle All button," +
             " verify text of the button and click on Clear Completed button")
-    public static void test_03ClearCompletedButtonFunction()
+    public static void test03ClearCompletedButtonFunction()
     {
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_03ClearCompletedButtonFunction");
+        todoMVCPage.htmlReport.startTestLog("STARTING TEST: test_03ClearCompletedButtonFunction");
         todoMVCPage.htmlReport.logINFO("Setting text value to the row: \"Variables under the hood\" ");
         todoMVCPage.newTodo.setTextValue("Variables under the hood");
         todoMVCPage.htmlReport.logINFO("Click on element");
@@ -54,16 +54,15 @@ public class Tests extends BaseUITest
         todoMVCPage.htmlReport.logINFO("Click on element");
         todoMVCPage.clearCompletedButton.clickOnIt();
 
-
     }
 
-    @Test(description = "VERIFY_ACTIVE_BUTTON_FUNCTION")
-    @Description("TEST_DESCRIPTION: set list of 3 rows, click on second row Toggle button," +
+    @Test(description = "VERIFY ACTIVE BUTTON FUNCTION")
+    @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button," +
             " click on Active Button, verify that 2 items left and Active button is Selected")
     public static void test_04ActiveButtonFunction()
     {
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_04ActiveButtonFunction");
+        todoMVCPage.htmlReport.startTestLog("STARTING TEST: test04ActiveButtonFunction");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
         todoMVCPage.setList("Environment", "Java Run Time Environment", "Intellij - Fundamentals");
         todoMVCPage.htmlReport.logINFO("Click on element");
@@ -77,13 +76,13 @@ public class Tests extends BaseUITest
 
     }
 
-    @Test(description = "VERIFY_COMPLETED_BUTTON_FUNCTION")
-    @Description("TEST_DESCRIPTION: set list of 3 rows, click on second row Toggle button, click on Completed button" +
+    @Test(description = "VERIFY COMPLETED BUTTON FUNCTION")
+    @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button, click on Completed button" +
             "verify that 2 items left and Completed button is Selected")
-    public static void test_05CompletedButtonFunction()
+    public static void test05CompletedButtonFunction()
     {
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_05CompletedButtonFunction");
+        todoMVCPage.htmlReport.startTestLog("STARTING TEST: test05CompletedButtonFunction");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
         todoMVCPage.setList("Clarity", "Noise", "Calmness");
         todoMVCPage.htmlReport.logINFO("Click on element");
@@ -97,13 +96,13 @@ public class Tests extends BaseUITest
 
     }
 
-    @Test(description = "VERIFY_ALL_BUTTON_FUNCTION")
-    @Description("TEST_DESCRIPTION: set list of 3 rows, click on second row Toggle button, click on Completed button," +
+    @Test(description = "VERIFY ALL BUTTON FUNCTION")
+    @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button, click on Completed button," +
             "click on All button, verify that All button is Selected")
-    public static void test_06AllButtonFunction()
+    public static void test06AllButtonFunction()
     {
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_06AllButtonFunction");
+        todoMVCPage.htmlReport.startTestLog("STARTING TEST: test06AllButtonFunction");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
         todoMVCPage.setList("JavaScript", "TypeScript", "Python");
         todoMVCPage.htmlReport.logINFO("Click on element");
@@ -118,13 +117,13 @@ public class Tests extends BaseUITest
 
     }
 
-    @Test(description = "DELETE_WITH_DOUBLE_CLICK_ON_THE_ROW_AND_HIT_BACKSPACE")
-    @Description("TEST_DESCRIPTION: set 3 rows, double click on first row, take the length of the string and press" +
+    @Test(description = "DELETE WITH DOUBLE CLICK ON THE ROW AND HIT BACKSPACE")
+    @Description("TEST DESCRIPTION: set 3 rows, double click on first row, take the length of the string and press" +
             "Backspace button same times as the length of the string, and verify that 2 items left")
-    public static void test_07DoubleClickToDeleteRow()
+    public static void test07DoubleClickToDeleteRow()
     {
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        todoMVCPage.htmlReport.startTestLog("STARTING_TEST: test_07DoubleClickToDeleteRow");
+        todoMVCPage.htmlReport.startTestLog("STARTING TEST: test07DoubleClickToDeleteRow");
         todoMVCPage.htmlReport.logINFO("Setting list of 3 rows with text in each row");
         todoMVCPage.setList("ABSTRACTION is a thing", "POLYMORPHISM", "ENCAPSULATION");
         todoMVCPage.htmlReport.logINFO("Delete text in row by double click and delete with backspace");
