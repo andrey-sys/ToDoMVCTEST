@@ -14,25 +14,25 @@ public class Verification extends BaseElement
     }
 
     @Step("Verification CLASS: verification of the text from element")
-    public void verifyTextFromElement(String expectedValue)
+    public void expectedText(String expectedValue)
     {
         Assert.assertEquals(getElement(verificationElementXpath).getText(), expectedValue);
     }
 
     @Step("Verification CLASS: verify if the element is selected, taking the part of attribute value that contains the text(SELECTED)")
-    public void verifyIfElementSelected(String attributeName, String partOfAttributeValue)
+    public void ifElementSelected(String attributeName, String partOfAttributeName)
     {
-        Assert.assertTrue(getElement(verificationElementXpath).getAttribute(attributeName).contains(partOfAttributeValue));
+        Assert.assertTrue(getElement(verificationElementXpath).getAttribute(attributeName).contains(partOfAttributeName));
     }
 
     @Step("Verification CLASS: verify element if displayed")
-    public void verifyElementIsDisplayed()
+    public void ifElementDisplayed()
     {
         Assert.assertTrue(getElement(verificationElementXpath).isDisplayed());
     }
 
     @Step("Verification CLASS: verify element that not displayed")
-    public void verifyElementIsNotDisplayed()
+    public void ifElementNotDisplayed()
     {
         Assert.assertFalse(getElement(verificationElementXpath).isDisplayed());
     }

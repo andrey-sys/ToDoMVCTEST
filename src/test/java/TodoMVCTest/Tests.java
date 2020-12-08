@@ -21,7 +21,7 @@ public class Tests extends BaseUITest
         TodoMVCPage todoMVCPage = new TodoMVCPage();
         htmlReport.log("STARTING TEST: test01VerifyLogoTodoMVCOnNavigation");
         htmlReport.logINFO("Validation of the header text element: \"todos\" on the main page");
-        todoMVCPage.verifyTextFromHeader.verifyTextFromElement("todos");
+        todoMVCPage.verifyTextFromHeader.expectedText("todos");
     }
 
     @Test(description = "SET LIST AND DELETE ROWS")
@@ -39,7 +39,7 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Delete one row");
         flow.deleteRow();
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"1\" ");
-        todoMVCPage.strongTag.verifyTextFromElement("1");
+        todoMVCPage.strongTag.expectedText("1");
 
     }
 
@@ -56,7 +56,7 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.toggleAllButton.clickOnIt();
         htmlReport.logINFO("Validation of the text on button element, should be \"Clear completed\" ");
-        todoMVCPage.textClearCompletedButton.verifyTextFromElement("Clear completed");
+        todoMVCPage.textClearCompletedButton.expectedText("Clear completed");
         htmlReport.logINFO("Click on element");
         todoMVCPage.clearCompletedButton.clickOnIt();
 
@@ -78,9 +78,9 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.activeButton.clickOnIt();
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"2\" ");
-        todoMVCPage.strongTag.verifyTextFromElement("2");
+        todoMVCPage.strongTag.expectedText("2");
         htmlReport.logINFO("Validation of selected element");
-        todoMVCPage.activeButtonIsSelected.verifyIfElementSelected("class", "selected");
+        todoMVCPage.activeButtonIsSelected.ifElementSelected("class", "selected");
 
     }
 
@@ -100,9 +100,9 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.completedButton.clickOnIt();
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"2\" ");
-        todoMVCPage.strongTag.verifyTextFromElement("2");
+        todoMVCPage.strongTag.expectedText("2");
         htmlReport.logINFO("Validation of selected element");
-        todoMVCPage.completedButtonIsSelected.verifyIfElementSelected("class", "selected");
+        todoMVCPage.completedButtonIsSelected.ifElementSelected("class", "selected");
 
     }
 
@@ -124,7 +124,7 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.allButton.clickOnIt();
         htmlReport.logINFO("Validation of selected element");
-        todoMVCPage.allButtonIsSelected.verifyIfElementSelected("class", "selected");
+        todoMVCPage.allButtonIsSelected.ifElementSelected("class", "selected");
 
 
     }
@@ -143,7 +143,7 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Delete text in row by double click and delete with backspace");
         flow.deleteRowWithBackspace(todoMVCPage.todoRow_2_text, todoMVCPage.todoRow_2, todoMVCPage.todoRowEdit_2);
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"2\" ");
-        todoMVCPage.strongTag.verifyTextFromElement("2");
+        todoMVCPage.strongTag.expectedText("2");
         htmlReport.logINFO("Click on element");
         todoMVCPage.completedButton.clickOnIt();
         htmlReport.logINFO("Click on element");
