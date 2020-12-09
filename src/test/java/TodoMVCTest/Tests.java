@@ -50,7 +50,7 @@ public class Tests extends BaseUITest
     {
         HTMLReport htmlReport = new HTMLReport();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
-        htmlReport.log("STARTING TEST: test_03ClearCompletedButtonFunction");
+        htmlReport.log("STARTING TEST: test03ClearCompletedButtonFunction");
         htmlReport.logINFO("Setting text value to the row: \"Variables under the hood\" ");
         todoMVCPage.newTodo.setTextValue("Variables under the hood");
         htmlReport.logINFO("Click on element");
