@@ -25,16 +25,5 @@ public class Verification extends BaseElement
         Assert.assertTrue(getElement(verificationElementXpath).getAttribute(attributeName).contains(partOfAttributeName));
     }
 
-    @Step("Verification CLASS: verify element if displayed")
-    public void ifElementDisplayed()
-    {
-        Assert.assertTrue(getElement(verificationElementXpath).isDisplayed());
-    }
-
-    @Step("Verification CLASS: verify element that not displayed")
-    public void ifElementNotDisplayed()
-    {
-        Assert.assertFalse(getElement(verificationElementXpath).isDisplayed());
-    }
 
 }

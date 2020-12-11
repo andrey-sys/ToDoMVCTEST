@@ -2,6 +2,8 @@ package TodoMVCTest;
 
 import TodoMVCExtensions.HTMLReport;
 import TodoMVCExtensions.TodoMVCWorkFlow;
+import TodoMVCExtensions.Verification;
+import TodoMVCPageObjects.Button;
 import TodoMVCPageObjects.TodoMVCPage;
 import TodosMVCUtilities.BaseUITest;
 import io.qameta.allure.Description;
@@ -111,6 +113,7 @@ public class Tests extends BaseUITest
             "click on All button, verify that All button is Selected")
     public static void test06AllButtonFunction()
     {
+
         HTMLReport htmlReport = new HTMLReport();
         TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
