@@ -8,6 +8,7 @@ import TodosMVCUtilities.InitBrowserDriver;
 public class TodoMVCPage extends InitBrowserDriver
 {
 
+    Verification verify = new Verification();
 
     public Input newTodo = new Input("//input[@id='new-todo']");
 
@@ -29,9 +30,9 @@ public class TodoMVCPage extends InitBrowserDriver
 
     public Button allButton = new Button("//*[@href='#/']");
 
-    public Verification verifyTextFromHeader = new Verification("//h1[text()]");
+    public Text headerText = new Text("//h1[text()]");
 
-    public Verification strongTag = new Verification("//strong[text()]");
+    /*public Verification strongTag = new Verification("//strong[text()]");
 
     public Verification textClearCompletedButton = new Verification("//*[@id='clear-completed']");
 
@@ -39,7 +40,7 @@ public class TodoMVCPage extends InitBrowserDriver
 
     public Verification completedButtonIsSelected = new Verification("//*[@href='#/completed']");
 
-    public Verification allButtonIsSelected = new Verification("//*[@href='#/']");
+    public Verification allButtonIsSelected = new Verification("//*[@href='#/']");*/
 
     public TextBox todoRow_2_text = new TextBox("(//label[text()])[2]");
 

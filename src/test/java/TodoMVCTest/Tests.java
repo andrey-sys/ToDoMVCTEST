@@ -1,9 +1,7 @@
 package TodoMVCTest;
 
 import TodoMVCExtensions.HTMLReport;
-import TodoMVCExtensions.TodoMVCWorkFlow;
 import TodoMVCExtensions.Verification;
-import TodoMVCPageObjects.Button;
 import TodoMVCPageObjects.TodoMVCPage;
 import TodosMVCUtilities.BaseUITest;
 import io.qameta.allure.Description;
@@ -19,14 +17,15 @@ public class Tests extends BaseUITest
     @Description("TEST DESCRIPTION: verify element's text of the logo on main page")
     public static void test01VerifyLogoTodoMVCOnNavigation()
     {
+
         HTMLReport htmlReport = new HTMLReport();
-        TodoMVCPage todoMVCPage = new TodoMVCPage();
         htmlReport.log("STARTING TEST: test01VerifyLogoTodoMVCOnNavigation");
         htmlReport.logINFO("Validation of the header text element: \"todos\" on the main page");
-        todoMVCPage.verifyTextFromHeader.expectedText("todos");
+        TodoMVCPage verify = new TodoMVCPage();
+        verify.headerText.expectedText("todos");
     }
 
-    @Test(description = "SET LIST AND DELETE ROWS")
+   /* @Test(description = "SET LIST AND DELETE ROWS")
     @Description("TEST DESCRIPTION: set list of 3 rows and delete two of them and verify that left one row")
     public static void test02SetListAndDelete()
     {
@@ -152,5 +151,5 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.allButton.clickOnIt();
 
-    }
+    }*/
 }
