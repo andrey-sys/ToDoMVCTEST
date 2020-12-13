@@ -1,7 +1,7 @@
 package TodoMVCTest;
 
 import TodoMVCExtensions.HTMLReport;
-import TodoMVCExtensions.Verification;
+import TodoMVCExtensions.TodoMVCWorkFlow;
 import TodoMVCPageObjects.TodoMVCPage;
 import TodosMVCUtilities.BaseUITest;
 import io.qameta.allure.Description;
@@ -25,13 +25,12 @@ public class Tests extends BaseUITest
         verify.headerText.expectedText("todos");
     }
 
-   /* @Test(description = "SET LIST AND DELETE ROWS")
+    @Test(description = "SET LIST AND DELETE ROWS")
     @Description("TEST DESCRIPTION: set list of 3 rows and delete two of them and verify that left one row")
     public static void test02SetListAndDelete()
     {
         HTMLReport htmlReport = new HTMLReport();
         TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
-        TodoMVCPage todoMVCPage = new TodoMVCPage();
         htmlReport.log("STARTING TEST: test02SetListAndDelete");
         htmlReport.logINFO("Setting list of 3 rows with text in each row");
         flow.setList("Data types and variables", "Kinds of Data Types", "Variables Rules");
@@ -40,7 +39,8 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Delete one row");
         flow.deleteRow();
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"1\" ");
-        todoMVCPage.strongTag.expectedText("1");
+        TodoMVCPage verify = new TodoMVCPage();
+        verify.strongTag.expectedText("1");
 
     }
 
@@ -57,7 +57,8 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.toggleAllButton.clickOnIt();
         htmlReport.logINFO("Validation of the text on button element, should be \"Clear completed\" ");
-        todoMVCPage.textClearCompletedButton.expectedText("Clear completed");
+        TodoMVCPage verify = new TodoMVCPage();
+        verify.clearCompletedButton.expectedText("Clear completed");
         htmlReport.logINFO("Click on element");
         todoMVCPage.clearCompletedButton.clickOnIt();
 
@@ -79,9 +80,10 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.activeButton.clickOnIt();
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"2\" ");
-        todoMVCPage.strongTag.expectedText("2");
+        TodoMVCPage verify = new TodoMVCPage();
+        verify.strongTag.expectedText("2");
         htmlReport.logINFO("Validation of selected element");
-        todoMVCPage.activeButtonIsSelected.ifElementSelected("class", "selected");
+        verify.activeButton.ifElementSelected("class", "selected");
 
     }
 
@@ -101,9 +103,10 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.completedButton.clickOnIt();
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"2\" ");
-        todoMVCPage.strongTag.expectedText("2");
+        TodoMVCPage verify = new TodoMVCPage();
+        verify.strongTag.expectedText("2");
         htmlReport.logINFO("Validation of selected element");
-        todoMVCPage.completedButtonIsSelected.ifElementSelected("class", "selected");
+        verify.completedButton.ifElementSelected("class", "selected");
 
     }
 
@@ -126,7 +129,8 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Click on element");
         todoMVCPage.allButton.clickOnIt();
         htmlReport.logINFO("Validation of selected element");
-        todoMVCPage.allButtonIsSelected.ifElementSelected("class", "selected");
+        TodoMVCPage verify = new TodoMVCPage();
+        verify.allButton.ifElementSelected("class", "selected");
 
 
     }
@@ -139,17 +143,18 @@ public class Tests extends BaseUITest
         HTMLReport htmlReport = new HTMLReport();
         TodoMVCWorkFlow flow = new TodoMVCWorkFlow();
         TodoMVCPage todoMVCPage = new TodoMVCPage();
+        TodoMVCPage verify = new TodoMVCPage();
         htmlReport.log("STARTING TEST: test07DoubleClickToDeleteRow");
         htmlReport.logINFO("Setting list of 3 rows with text in each row");
         flow.setList("ABSTRACTION is a thing", "POLYMORPHISM", "ENCAPSULATION");
         htmlReport.logINFO("Delete text in row by double click and delete with backspace");
         flow.deleteRowWithBackspace(todoMVCPage.todoRow_2_text, todoMVCPage.todoRow_2, todoMVCPage.todoRowEdit_2);
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"2\" ");
-        todoMVCPage.strongTag.expectedText("2");
+        verify.strongTag.expectedText("2");
         htmlReport.logINFO("Click on element");
         todoMVCPage.completedButton.clickOnIt();
         htmlReport.logINFO("Click on element");
         todoMVCPage.allButton.clickOnIt();
 
-    }*/
+    }
 }
