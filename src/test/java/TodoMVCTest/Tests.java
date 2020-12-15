@@ -1,20 +1,12 @@
-/**
- *
- * My Test's package
- *
- * */
 package TodoMVCTest;
 
 import TodoMVCExtensions.HTMLReport;
 import TodoMVCExtensions.TodoMVCWorkFlow;
 import TodoMVCPageObjects.TodoMVCPage;
 import TodosMVCUtilities.BaseUITest;
-import com.google.common.util.concurrent.Uninterruptibles;
 import io.qameta.allure.Description;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -25,6 +17,8 @@ import java.util.concurrent.TimeUnit;
  * This is main class for Sanity tests,
  * that verify the main functionality of main page http://todomvc.com/examples/emberjs/
  * website, like text fields, buttons, text boxes etc...
+ *
+ * <img src="TodoMVCTest" alt="screenshot of the main page with some list"/>
  *
  * */
 
@@ -76,7 +70,7 @@ public class Tests extends BaseUITest
 
     /**
      *
-     * In this test I verify functionality of .
+     * In this test I verify functionality of clear completed button.
      *
      * */
     @Test(description = "VERIFY CLEAR COMPLETED BUTTON FUNCTION")
@@ -99,6 +93,11 @@ public class Tests extends BaseUITest
 
     }
 
+    /**
+     *
+     * In this test I verify functionality of active button.
+     *
+     * */
     @Test(description = "VERIFY ACTIVE BUTTON FUNCTION")
     @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button," +
             " click on Active Button, verify that 2 items left and Active button is Selected")
@@ -122,6 +121,11 @@ public class Tests extends BaseUITest
 
     }
 
+    /**
+     *
+     * In this test I verify functionality of completed button.
+     *
+     * */
     @Test(description = "VERIFY COMPLETED BUTTON FUNCTION")
     @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button, click on Completed button" +
             "verify that 2 items left and Completed button is Selected")
@@ -145,6 +149,11 @@ public class Tests extends BaseUITest
 
     }
 
+    /**
+     *
+     * In this test I verify functionality of All button.
+     *
+     * */
     @Test(description = "VERIFY ALL BUTTON FUNCTION")
     @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button, click on Completed button," +
             "click on All button, verify that All button is Selected")
@@ -170,6 +179,12 @@ public class Tests extends BaseUITest
 
     }
 
+    /**
+     *
+     * In this test I verify removing/editing of row in the
+     * list by double clicking and backspace button hitting.
+     *
+     * */
     @Test(description = "DELETE A ROW WITH DOUBLE CLICK AND HIT BACKSPACE")
     @Description("TEST DESCRIPTION: set 3 rows, double click on first row, take the length of the string and press" +
             "Backspace button same times as the length of the string, and verify that 2 items left")
