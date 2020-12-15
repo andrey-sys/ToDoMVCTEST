@@ -1,9 +1,10 @@
-package TodoMVCTest;
 /**
  *
  * My Test's package
  *
  * */
+package TodoMVCTest;
+
 import TodoMVCExtensions.HTMLReport;
 import TodoMVCExtensions.TodoMVCWorkFlow;
 import TodoMVCPageObjects.TodoMVCPage;
@@ -45,9 +46,6 @@ public class Tests extends BaseUITest
         htmlReport.log("STARTING TEST: test01VerifyLogoTodoMVCOnNavigation");
         htmlReport.logINFO("Validation of the header text element: \"todos\" on the main page");
         TodoMVCPage verify = new TodoMVCPage();
-        TodoMVCPage flow = new TodoMVCPage();
-        flow.newTodo.setTextValue("!!!מיכאל פוקאן אהוב שלי");
-        Uninterruptibles.sleepUninterruptibly(10, TimeUnit.SECONDS);
         verify.headerText.expectedText("todos");
     }
 
