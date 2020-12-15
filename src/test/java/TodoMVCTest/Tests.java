@@ -1,18 +1,41 @@
 package TodoMVCTest;
-
+/**
+ *
+ * My Test's package
+ *
+ * */
 import TodoMVCExtensions.HTMLReport;
 import TodoMVCExtensions.TodoMVCWorkFlow;
 import TodoMVCPageObjects.TodoMVCPage;
 import TodosMVCUtilities.BaseUITest;
+import com.google.common.util.concurrent.Uninterruptibles;
 import io.qameta.allure.Description;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
+/**
+ *
+ * @author Andrew
+ * @version 1.1
+ * @since 1.0
+ *
+ * This is main class for Sanity tests,
+ * that verify the main functionality of main page http://todomvc.com/examples/emberjs/
+ * website, like text fields, buttons, text boxes etc...
+ *
+ * */
 
 @Listeners(TodoMVCExtensions.Listeners.class)
 public class Tests extends BaseUITest
 {
 
+    /**
+     *
+     * Here I verify logo of the main page after the navigation.
+     *
+     * */
     @Test(description = "Verify logo")
     @Description("TEST DESCRIPTION: verify element's text of the logo on main page")
     public static void test01VerifyLogoTodoMVCOnNavigation()
@@ -22,9 +45,18 @@ public class Tests extends BaseUITest
         htmlReport.log("STARTING TEST: test01VerifyLogoTodoMVCOnNavigation");
         htmlReport.logINFO("Validation of the header text element: \"todos\" on the main page");
         TodoMVCPage verify = new TodoMVCPage();
+        TodoMVCPage flow = new TodoMVCPage();
+        flow.newTodo.setTextValue("!!!מיכאל פוקאן אהוב שלי");
+        Uninterruptibles.sleepUninterruptibly(10, TimeUnit.SECONDS);
         verify.headerText.expectedText("todos");
     }
 
+    /**
+     *
+     * In this test I create list of 3 rows and delete 2 of them,
+     * and verify that just one row has left.
+     *
+     * */
     @Test(description = "SET LIST AND DELETE ROWS")
     @Description("TEST DESCRIPTION: set list of 3 rows and delete two of them and verify that left one row")
     public static void test02SetListAndDelete()
@@ -44,6 +76,11 @@ public class Tests extends BaseUITest
 
     }
 
+    /**
+     *
+     * In this test I verify functionality of .
+     *
+     * */
     @Test(description = "VERIFY CLEAR COMPLETED BUTTON FUNCTION")
     @Description("TEST DESCRIPTION: set row with text, click on Toggle All button," +
             " verify text of the button and click on Clear Completed button")

@@ -4,13 +4,13 @@ import TodoMVCPageObjects.TextBox;
 import TodoMVCPageObjects.TodoMVCPage;
 import io.qameta.allure.Step;
 
+
 public class TodoMVCWorkFlow extends TodoMVCPage
 {
 
     @Step("TodoMVCWorkFlow CLASS: Navigation to TodoMVC web application")
     public void navigate()
     {
-
         getDriver().get("http://todomvc.com/examples/emberjs");
     }
 

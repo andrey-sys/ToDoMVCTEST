@@ -14,7 +14,13 @@ public class Input extends BaseElement
     {
         this.inputElementXpath = inputElementXpath;
     }
-
+/**
+ *
+ * Method setTextValue will not return anything.
+ * The method is for setting some text into empty row.
+ * @param value is getting future text.
+ *
+ * */
     @Step("Input CLASS: Set text value in one row and press Enter button")
     public void setTextValue(String value)
     {

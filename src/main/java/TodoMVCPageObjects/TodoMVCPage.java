@@ -1,7 +1,6 @@
 package TodoMVCPageObjects;
 
 import TodoMVCExtensions.TodoActions;
-import TodoMVCExtensions.Verification;
 import TodosMVCUtilities.InitBrowserDriver;
 
 
@@ -32,9 +31,9 @@ public class TodoMVCPage extends InitBrowserDriver
 
     public Button allButton = new Button("//*[@href='#/']");
 
-    public Text headerText = new Text("//h1[text()]");
+    public TextField headerText = new TextField("//h1[text()]");
 
-    public Text strongTag = new Text("//strong[text()]");
+    public TextField strongTag = new TextField("//strong[text()]");
 
     public TextBox todoRow_2_text = new TextBox("(//label[text()])[2]");
 

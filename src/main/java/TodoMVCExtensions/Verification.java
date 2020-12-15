@@ -1,7 +1,5 @@
 package TodoMVCExtensions;
 
-import TodoMVCPageObjects.Text;
-import TodoMVCPageObjects.TodoMVCPage;
 import TodosMVCUtilities.BaseElement;
 import io.qameta.allure.Step;
 import org.testng.Assert;
