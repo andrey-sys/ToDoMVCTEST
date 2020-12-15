@@ -26,8 +26,8 @@ There is an exercise, for demonstrating of my skills
    that have 7 executable tests src/test/java/TodoMVCTest/Tests
   - TodoMVCUtilities folder contains 3 classes
    "BaseElement", "BaseUITest", "InitBrowserDriver"
-  - TodoMVCPageObjects folder contains 4 classes
-   "Button", "Input", "TextBox", "TodoMVCPage"
+  - TodoMVCPageObjects folder contains 5 classes
+   "Button", "Input", "TextBox", "TextField" "TodoMVCPage"
   - TodoMVCExtensions folder contains 5 classes
    "HTMLReport", "Listeners", "TodoActions", "TodoMVCWorkFlow", "Verification"     
      

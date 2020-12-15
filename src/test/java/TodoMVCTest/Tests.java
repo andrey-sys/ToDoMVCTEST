@@ -18,8 +18,6 @@ import org.testng.annotations.Test;
  * that verify the main functionality of main page http://todomvc.com/examples/emberjs/
  * website, like text fields, buttons, text boxes etc...
  *
- * <img src="TodoMVCTest" alt="screenshot of the main page with some list"/>
- *
  * */
 
 @Listeners(TodoMVCExtensions.Listeners.class)
