@@ -10,6 +10,12 @@ import org.testng.ITestResult;
 
 import static TodosMVCUtilities.InitBrowserDriver.getDriver;
 
+
+/**
+ *
+ * I am using the Listeners class to extend my TestNG report and Allure report.
+ *
+ * */
 public class Listeners implements ITestListener
 {
     @Step("Listeners CLASS: Starting execution of the tests")
@@ -56,6 +62,11 @@ public class Listeners implements ITestListener
         saveScreenshot();
     }
 
+    /**
+     *
+     * This method is designed to take a screenshot if the test fails.
+     *
+     * */
     @Step("Listeners CLASS: Screen shot in case of test is failed")
     @Attachment(value = "Page Screen Shot", type = "image/png")
     public byte[] saveScreenshot()

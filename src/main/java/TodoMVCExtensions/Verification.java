@@ -5,13 +5,11 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 
 /**
- *
- * @deprecated  this class and methods of this class replaced
- * with methods in the following classes
  * @see TodoMVCPageObjects.Button  expectedText() and  ifElementSelected().
  * @see TodoMVCPageObjects.TextField  expectedText().
- *
- * */
+ * @deprecated this class and methods of this class replaced
+ * with methods in the following classes
+ */
 public class Verification extends BaseElement
 {
 

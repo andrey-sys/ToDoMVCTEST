@@ -180,7 +180,7 @@ public class Tests extends BaseUITest
         htmlReport.logINFO("Setting list of 3 rows with text in each row");
         flow.setList("ABSTRACTION is a thing", "POLYMORPHISM", "ENCAPSULATION");
         htmlReport.logINFO("Delete text in row by double click and delete with backspace");
-        flow.deleteRowWithBackspace(todoMVCPage.todoRow_2_text, todoMVCPage.todoRow_2, todoMVCPage.todoRowEdit_2);
+        flow.deleteRowWithBackspace(todoMVCPage.todoRow_2, todoMVCPage.todoRowEdit_2);
         htmlReport.logINFO("Validation of the strong element, number of item left, should be \"2\" ");
         verify.strongTag.expectedText("2");
         htmlReport.logINFO("Click on element");

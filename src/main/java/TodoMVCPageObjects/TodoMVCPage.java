@@ -4,10 +4,8 @@ import TodoMVCExtensions.TodoActions;
 import TodosMVCUtilities.InitBrowserDriver;
 
 /**
- *
  * Here I will initialize all Xpath elements of all constructor classes, as objects.
- *
- * */
+ */
 public class TodoMVCPage extends InitBrowserDriver
 {
 
@@ -36,8 +34,6 @@ public class TodoMVCPage extends InitBrowserDriver
     public TextField headerText = new TextField("//h1[text()]");
 
     public TextField strongTag = new TextField("//strong[text()]");
-
-    public TextBox todoRow_2_text = new TextBox("(//label[text()])[2]");
 
 
 }

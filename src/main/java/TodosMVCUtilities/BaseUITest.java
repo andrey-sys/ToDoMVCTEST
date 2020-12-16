@@ -10,16 +10,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 /**
- *
  * This is the main class of this package, it contains main methods for
  * basic instances like  WebDriver, extentReports and extentTest,
  * also contains basics method of TestNg @BeforeClass, @BeforeMethod, @After
  * Method and @AfterClass
- *
  **/
 public class BaseUITest extends InitBrowserDriver
 {
@@ -29,12 +26,10 @@ public class BaseUITest extends InitBrowserDriver
     public static ExtentTest test;
 
     /**
-     *
      * setUpBrowser method created for setting the reports file path, and
      * call to driver to open and maximize the browser window.
      * setUpBrowser executed just once before calling each class.
-     *
-     * */
+     */
     @BeforeClass(description = "Before class: start the Chrome browser")
     public void setUpBrowser()
     {
@@ -50,12 +45,11 @@ public class BaseUITest extends InitBrowserDriver
     }
 
     /**
-     *
      * navigateToSite method created for navigation to the site's page.
+     *
      * @see TodoMVCWorkFlow/navigate();
      * navigateToSite method executed before each test, in the Tests class.
-     *
-     * */
+     */
     @BeforeMethod(description = "Before method: navigation to the Web application")
     public void navigateToSite()
     {
@@ -67,12 +61,11 @@ public class BaseUITest extends InitBrowserDriver
     }
 
     /**
-     *
      * clearList method created for deleting list after each test.
+     *
      * @see TodoMVCWorkFlow/deleteAllList();
      * navigateToSite method executed before each test, in the Tests class.
-     *
-     * */
+     */
     @AfterMethod(description = "After method: deleting all list")
     public void clearList()
     {
@@ -84,12 +77,10 @@ public class BaseUITest extends InitBrowserDriver
     }
 
     /**
-     *
      * quitBrowser method created for canceling the browser and saving the
      * HTML report to the folder .
      * quitBrowser method executed just once in the end of the program.
-     *
-     * */
+     */
     @AfterClass(description = "After class: closing browser")
     public void quitBrowser()
     {
