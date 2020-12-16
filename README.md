@@ -96,7 +96,7 @@ In order to execute those tests you need to
      mvn clean install
     
   The command also will give you the same result. Be sure of
-   proper cloning of the code to right location, to avoid of misstates.  
+   proper cloning of the code to right location, to avoid of mistakes.  
   
  This exercise have an option to launch tests in Chrome,
   Edge or FireFox browser. For using this option,
@@ -152,4 +152,12 @@ I'm using UI functional tests result in a HTML report for
     
      Listeners CLASS: Screen shot in case of test is failed 1 sub-step1s 091ms
      Page Screen Shot                                             38 KB
-         
+     
+     
+ 
+#### Javadoc
+The project provide javadoc as well, if you want to run it,
+ after proper cloning you should enter to >javadoc package 
+ and find the index.html file, and open it in you browser.
+ 
+  

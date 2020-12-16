@@ -4,8 +4,17 @@ import TodosMVCUtilities.BaseElement;
 import io.qameta.allure.Step;
 import org.testng.Assert;
 
+/**
+ *
+ * @deprecated  this class and methods of this class replaced
+ * with methods in the following classes
+ * @see TodoMVCPageObjects.Button  expectedText() and  ifElementSelected().
+ * @see TodoMVCPageObjects.TextField  expectedText().
+ *
+ * */
 public class Verification extends BaseElement
 {
+
     private String verificationElementXpath;
 
     public Verification(String verificationElementXpath)
@@ -24,6 +33,5 @@ public class Verification extends BaseElement
     {
         Assert.assertTrue(getElement(verificationElementXpath).getAttribute(attributeName).contains(partOfAttributeName));
     }
-
 
 }

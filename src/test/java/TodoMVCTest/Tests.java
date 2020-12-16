@@ -9,26 +9,22 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 /**
- *
  * @author Andrew
  * @version 1.1
  * @since 1.0
- *
+ * <p>
  * This is main class for Sanity tests,
  * that verify the main functionality of main page http://todomvc.com/examples/emberjs/
  * website, like text fields, buttons, text boxes etc...
- *
- * */
+ */
 
 @Listeners(TodoMVCExtensions.Listeners.class)
 public class Tests extends BaseUITest
 {
 
     /**
-     *
      * Here I verify logo of the main page after the navigation.
-     *
-     * */
+     */
     @Test(description = "Verify logo")
     @Description("TEST DESCRIPTION: verify element's text of the logo on main page")
     public static void test01VerifyLogoTodoMVCOnNavigation()
@@ -42,11 +38,9 @@ public class Tests extends BaseUITest
     }
 
     /**
-     *
      * In this test I create list of 3 rows and delete 2 of them,
      * and verify that just one row has left.
-     *
-     * */
+     */
     @Test(description = "SET LIST AND DELETE ROWS")
     @Description("TEST DESCRIPTION: set list of 3 rows and delete two of them and verify that left one row")
     public static void test02SetListAndDelete()
@@ -67,10 +61,8 @@ public class Tests extends BaseUITest
     }
 
     /**
-     *
      * In this test I verify functionality of clear completed button.
-     *
-     * */
+     */
     @Test(description = "VERIFY CLEAR COMPLETED BUTTON FUNCTION")
     @Description("TEST DESCRIPTION: set row with text, click on Toggle All button," +
             " verify text of the button and click on Clear Completed button")
@@ -92,10 +84,8 @@ public class Tests extends BaseUITest
     }
 
     /**
-     *
      * In this test I verify functionality of active button.
-     *
-     * */
+     */
     @Test(description = "VERIFY ACTIVE BUTTON FUNCTION")
     @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button," +
             " click on Active Button, verify that 2 items left and Active button is Selected")
@@ -120,10 +110,8 @@ public class Tests extends BaseUITest
     }
 
     /**
-     *
      * In this test I verify functionality of completed button.
-     *
-     * */
+     */
     @Test(description = "VERIFY COMPLETED BUTTON FUNCTION")
     @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button, click on Completed button" +
             "verify that 2 items left and Completed button is Selected")
@@ -148,10 +136,8 @@ public class Tests extends BaseUITest
     }
 
     /**
-     *
      * In this test I verify functionality of All button.
-     *
-     * */
+     */
     @Test(description = "VERIFY ALL BUTTON FUNCTION")
     @Description("TEST DESCRIPTION: set list of 3 rows, click on second row Toggle button, click on Completed button," +
             "click on All button, verify that All button is Selected")
@@ -178,11 +164,9 @@ public class Tests extends BaseUITest
     }
 
     /**
-     *
      * In this test I verify removing/editing of row in the
      * list by double clicking and backspace button hitting.
-     *
-     * */
+     */
     @Test(description = "DELETE A ROW WITH DOUBLE CLICK AND HIT BACKSPACE")
     @Description("TEST DESCRIPTION: set 3 rows, double click on first row, take the length of the string and press" +
             "Backspace button same times as the length of the string, and verify that 2 items left")
