@@ -4,8 +4,9 @@
 There is an exercise, for demonstrating of my skills
  in the Java OOP language, using the Selenium and TestNG frameworks
   to automate several UI tests and check the functionality
-   of the website. In this exercise, I demonstrate basic skills for 
-    testing web pages and their components, working with DOM and Xpath selector
+   of the website. In this exercise, I use Top-Down design and 
+   demonstrate basic skills of testing web pages
+    and their components, working with DOM and Xpath selector
     for finding right elements and their attributes.  In this exercise, I will
      add most popular test reporting framework which is developed
       by Yandex QA Team – Allure.  I will add additional codes
