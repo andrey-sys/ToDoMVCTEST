@@ -1,7 +1,7 @@
 ## ToDoMVC Automation Exercise
 
 ***
-There is an exercise, for demonstrating of my skills
+There is an exercise, for demonstrating my skills
  in the Java OOP language, using the Selenium and TestNG frameworks
   to automate several UI tests and check the functionality
    of the website. In this exercise, I use Top-Down design and 
@@ -9,14 +9,13 @@ There is an exercise, for demonstrating of my skills
     and their components, working with DOM and Xpath selector
     for finding right elements and their attributes.  In this exercise, I will
      add most popular test reporting framework which is developed
-      by Yandex QA Team – Allure.  I will add additional codes
-      and configurations on ExtentReports project.
-      Thus, in this code, you can generate test reports both Allure and
-      ExtentReports and see it in HTML format in your browser.
+      by Yandex QA Team – Allure.
+      Thus, in this exercise, you can generate test reports both Allure and
+      ExtentReports and see it in HTML format and in your browser.
    
    In my opinion, automation of your tests will 
     dramatically speed up web testing and
-    leave more time to create wide range of tests to improve
+    leave more time to create a wide range of tests to improve
     your quality of web application, also will save your time and money.
    
    
