@@ -1,21 +1,21 @@
 ## ToDoMVC Automation Exercise
 
 ***
-There is an exercise, for demonstrating of my skills
+There is an exercise, for demonstrating my skills
  in the Java OOP language, using the Selenium and TestNG frameworks
   to automate several UI tests and check the functionality
-   of the website. In this exercise, I demonstrate basic skills for 
-    testing web pages and their components, working with DOM and Xpath selector
+   of the website. In this exercise, I use Top-Down design and 
+   demonstrate basic skills of testing web pages
+    and their components, working with DOM and Xpath selector
     for finding right elements and their attributes.  In this exercise, I will
      add most popular test reporting framework which is developed
-      by Yandex QA Team – Allure.  I will add additional codes
-      and configurations on ExtentReports project.
-      Thus, in this code, you can generate test reports both Allure and
-      ExtentReports and see it in HTML format in your browser.
+      by Yandex QA Team – Allure.
+      Thus, in this exercise, you can generate test reports both Allure and
+      ExtentReports and see it in HTML format and in your browser.
    
    In my opinion, automation of your tests will 
     dramatically speed up web testing and
-    leave more time to create wide range of tests to improve
+    leave more time to create a wide range of tests to improve
     your quality of web application, also will save your time and money.
    
    
@@ -27,7 +27,7 @@ There is an exercise, for demonstrating of my skills
   - TodoMVCUtilities folder contains 3 classes
    "BaseElement", "BaseUITest", "InitBrowserDriver"
   - TodoMVCPageObjects folder contains 4 classes
-   "Button", "Input", "TextBox", "TodoMVCPage"
+   "Button", "Input", "TextField" "TodoMVCPage"
   - TodoMVCExtensions folder contains 5 classes
    "HTMLReport", "Listeners", "TodoActions", "TodoMVCWorkFlow", "Verification"     
      
@@ -96,7 +96,7 @@ In order to execute those tests you need to
      mvn clean install
     
   The command also will give you the same result. Be sure of
-   proper cloning of the code to right location, to avoid of misstates.  
+   proper cloning of the code to right location, to avoid of mistakes.  
   
  This exercise have an option to launch tests in Chrome,
   Edge or FireFox browser. For using this option,
@@ -152,4 +152,12 @@ I'm using UI functional tests result in a HTML report for
     
      Listeners CLASS: Screen shot in case of test is failed 1 sub-step1s 091ms
      Page Screen Shot                                             38 KB
-         
+     
+     
+ 
+#### Javadoc
+The project provide javadoc as well, if you want to run it,
+ after proper cloning you should enter to >javadoc package 
+ and find the index.html file, and open it in you browser.
+ 
+  
