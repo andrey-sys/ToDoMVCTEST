@@ -158,6 +158,6 @@ I'm using UI functional tests result in a HTML report for
 #### Javadoc
 The project provide javadoc as well, if you want to run it,
  after proper cloning you should enter to >javadoc package 
- and find the index.html file, and open it in you browser.
+ and find the index.html file, and open it in your browser.
  
   
