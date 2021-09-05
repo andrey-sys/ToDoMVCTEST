@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
@@ -14,8 +16,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  * <Factory> design pattern to create objects based on browser types,
  * like Chrome, FireFox and Edge browser.
  */
-public class InitBrowserDriver
-{
+public class InitBrowserDriver {
 
     /**
      * driver is Selenium WebDriver instance, not initialized in this moment.
@@ -24,8 +25,7 @@ public class InitBrowserDriver
     /**
      * browserType is String variable for setting type browser.
      */
-    private static String browserType = "chrome";
-
+    private static String browserType = "edge";
 
     /**
      * Method getDriver created for using across all my TestNG tests and method where
@@ -35,26 +35,19 @@ public class InitBrowserDriver
      * ChromeDriver, FirefoxDriver, EdgeDriver.
      */
     @Step("InitChromeDriver CLASS: initialization of Chrome driver")
-    public static WebDriver getDriver()
-    {
-        if (driver == null)
-        {
-
-            if (browserType.equalsIgnoreCase("Chrome"))
-            {
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            if (browserType.equalsIgnoreCase("Chrome")) {
                 WebDriverManager.chromedriver().setup();
                 DesiredCapabilities chrome_cap = DesiredCapabilities.chrome();
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("incognito");
-                chrome_cap.setCapability(ChromeOptions.CAPABILITY,options);
+                ChromeOptions chrome_options = new ChromeOptions();
+                chrome_options.addArguments("incognito");
+                chrome_cap.setCapability(ChromeOptions.CAPABILITY, chrome_options);
                 driver = new ChromeDriver(chrome_cap);
-            } else if (browserType.equalsIgnoreCase("FireFox"))
-            {
+            } else if (browserType.equalsIgnoreCase("FireFox")) {
                 WebDriverManager.firefoxdriver().setup();
-
                 driver = new FirefoxDriver();
-            } else if (browserType.equalsIgnoreCase("Edge"))
-            {
+            } else if (browserType.equalsIgnoreCase("Edge")) {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
             }
