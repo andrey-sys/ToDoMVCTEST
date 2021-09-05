@@ -4,8 +4,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
  * Class InitBrowserDriver created for Selenium WebDriver instance, in this class I'm using
@@ -41,10 +43,15 @@ public class InitBrowserDriver
             if (browserType.equalsIgnoreCase("Chrome"))
             {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                DesiredCapabilities chrome_cap = DesiredCapabilities.chrome();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("incognito");
+                chrome_cap.setCapability(ChromeOptions.CAPABILITY,options);
+                driver = new ChromeDriver(chrome_cap);
             } else if (browserType.equalsIgnoreCase("FireFox"))
             {
                 WebDriverManager.firefoxdriver().setup();
+
                 driver = new FirefoxDriver();
             } else if (browserType.equalsIgnoreCase("Edge"))
             {
